@@ -1,0 +1,6 @@
+.env
+node_modules/
+discloud.config
+badwords.txt
+.vs
+.vscode

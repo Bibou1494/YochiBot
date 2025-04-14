@@ -1,0 +1,27 @@
+{
+  "name": "yochibot",
+  "version": "0.1.0",
+  "description": "This bot is used in Yochi160's discord server",
+  "homepage": "https://github.com/Bibou1494/YochiBot#readme",
+  "bugs": {
+    "url": "https://github.com/Bibou1494/YochiBot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bibou1494/YochiBot.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "main.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "commands": "node \"command register.mjs\""
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7",
+    "enquirer": "^2.4.1",
+    "inquirer": "^12.4.3"
+  }
+}
