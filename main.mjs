@@ -15,6 +15,9 @@ client.on(Events.ClientReady, readyClient => {
     {
       name: 'Modère le serveur',
       type: 0
+    },
+    {
+      name: 'Version 1.0'
     }
   ];
 
