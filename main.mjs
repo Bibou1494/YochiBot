@@ -17,7 +17,8 @@ client.on(Events.ClientReady, readyClient => {
       type: 0
     },
     {
-      name: 'Version 1.0'
+      name: 'Version 1.0',
+      type: 3
     }
   ];
 
