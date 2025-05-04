@@ -55,7 +55,10 @@ client.on(Events.InteractionCreate, async interaction => {
 
   if (interaction.commandName === 'embed') {
 
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ ephemeral: false });
+
+    console.log("Embed command detected")
+    console.log("Sending an embed...")
 
     const title = interaction.options.getString('title');
     const description = interaction.options.getString('description');
@@ -64,19 +67,21 @@ client.on(Events.InteractionCreate, async interaction => {
     setTimeout(async () => {
         const channel = await client.channels.fetch(interaction.channelId); // Fetch the channel object
         if (channel) {
-            await channel.send({
-                content: `Envoyé par <@${interaction.user.id}>`,
+            await interaction.followUp({
+                // content: `Envoyé par <@${interaction.user.id}>`,
                 embeds: [
                     {
                         color: color,
                         title: title,
                         description: description,
-                    }
-                ]
+                    },
+                ],
+              ephemeral: false,              
             });
-            await interaction.followUp({ content: "✅ Embed envoyé avec succès !" });
+            console.log("Sent an embed")
         } else {
             await interaction.followUp({ content: "❌ Erreur : Impossible d'envoyer l'embed en DM.", ephemeral: true });
+            console.log("Embed command sent in dm, ignoring...")
         }
     }, 3000);
 }

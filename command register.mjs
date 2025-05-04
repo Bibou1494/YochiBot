@@ -12,7 +12,7 @@ const commands = [
     },
     {
     name: 'embed',
-    description: 'Envoie un embed personnalisé. COMMANDE RESERVEE AU ADMIN',
+    description: 'Envoie un embed personnalisé.',
     options: [
       {
         type: 3,
